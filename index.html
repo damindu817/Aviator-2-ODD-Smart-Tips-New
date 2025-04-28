@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="si">
+<!DOCTYPE html>
+<html lang="si">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,153 +16,167 @@
       justify-content: center;
       align-items: center;
       animation: fadeInBody 1s ease-in-out;
-    }@keyframes fadeInBody {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+    }
 
-.tips-container {
-  width: 95%;
-  max-width: 450px;
-  background: #161616;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(255, 0, 64, 0.4);
-  border: 2px solid #ff1744;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    @keyframes fadeInBody {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-h1 {
-  font-size: 24px;
-  color: #ff1744;
-  margin-bottom: 20px;
-  text-align: center;
-  text-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
-}
+    .tips-container {
+      width: 95%;
+      max-width: 450px;
+      background: #161616;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 0, 64, 0.4);
+      border: 2px solid #ff1744;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.tips-scroll {
-  width: 100%;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 10px;
-  margin-bottom: 20px;
-}
+    h1 {
+      font-size: 24px;
+      color: #ff1744;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
+    }
 
-.tip {
-  margin-bottom: 16px;
-  padding: 12px;
-  border-left: 4px solid #ff1744;
-  background-color: #212121;
-  border-radius: 8px;
-  font-size: 15px;
-  line-height: 1.6;
-}
+    .tips-scroll {
+      width: 100%;
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 10px;
+      margin-bottom: 20px;
+    }
 
-.tip strong {
-  color: #ff5252;
-}
+    .tip {
+      margin-bottom: 16px;
+      padding: 12px;
+      border-left: 4px solid #ff1744;
+      background-color: #212121;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
-.btn-container {
-  width: 100%;
-  text-align: center;
-}
+    .tip strong {
+      color: #ff5252;
+    }
 
-.btn {
-  padding: 10px 20px;
-  font-size: 14px;
-  background: #444;
-  color: #ccc;
-  border: none;
-  border-radius: 6px;
-  cursor: not-allowed;
-  text-decoration: none;
-  transition: all 0.3s;
-  display: inline-block;
-  max-width: 180px;
-  width: 90%;
-}
+    .btn-container {
+      width: 100%;
+      text-align: center;
+    }
 
-.btn.active {
-  background: #ff1744;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
-}
+    .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      background: #444;
+      color: #ccc;
+      border: none;
+      border-radius: 6px;
+      cursor: not-allowed;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+      max-width: 180px;
+      width: 90%;
+    }
 
-@media (max-width: 480px) {
-  .tips-container {
-    padding: 15px;
-  }
-  h1 {
-    font-size: 22px;
-  }
-  .tip {
-    font-size: 14px;
-  }
-  .btn {
-    font-size: 13px;
-    padding: 8px 16px;
-    max-width: 160px;
-  }
-}
+    .btn.active {
+      background: #ff1744;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+    }
 
+    @media (max-width: 480px) {
+      .tips-container {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .tip {
+        font-size: 14px;
+      }
+      .btn {
+        font-size: 13px;
+        padding: 8px 16px;
+        max-width: 160px;
+      }
+    }
   </style>
 </head>
-<body>  <div class="tips-container">
-    <h1>Aviator Game උපදෙස්</h1><div class="tips-scroll" id="tipsContent">
-  <div class="tip">
-    <strong>සිග්නල් ක්‍රමවේදය සහ අනුගමනය කළ යුතු නියමයන්</strong>
+
+<body>
+  <div class="tips-container">
+    <h1>Aviator Game උපදෙස්</h1>
+    <div class="tips-scroll" id="tipsContent">
+      <div class="tip">
+        <strong>සිග්නල් ක්‍රමවේදය සහ අනුගමනය කළ යුතු නියමයන්</strong>
+      </div>
+      <div class="tip">
+        <strong>1.</strong> සිග්නල් වේලාවට විනාඩි 15 කට පෙර Betting ආරම්භ කරන්න.<br>
+        උදාහරණය: සිග්නල් වේලාව 10:20:00 නම්, 10:19:45 සිට වට තුනක් (Rounds 3) Betting කරන්න.<br>
+        වට තුනක් තුළ Win ලැබෙන තුරු Bet කරන්න.
+      </div>
+
+      <div class="tip">
+        <strong>2.</strong> සිග්නල් වේලාවේ අතික්‍රමණය වුවහොත්, එම සිග්නල් එක නොසලකා හැරන්න.<br>
+        උදාහරණය: 10:19:00දී Rounds යාමක් සිදු වී ඇත්නම්, 10:20:00ට ඉදිරියට ගිය පසු Betting නොකරන්න.
+      </div>
+
+      <div class="tip">
+        <strong>3.</strong> 2× Odd එකේදී Martingale ක්‍රමය භාවිත කරන්න.<br>
+        වට තුනක් (Rounds 3) පමණක් Martingale ක්‍රමය යොදාගන්න.
+      </div>
+
+      <div class="tip">
+        <strong>4.</strong> සිග්නල් වේලාවට ආසන්නව 2× ට අඩු Odd තුනක් (Low Odds) දැක්වී ඇත්නම්, එම සිග්නල් එක නොසලකා හැරීම අවශ්‍යය.
+      </div>
+
+      <div class="tip">
+        <strong>5.</strong> සිග්නල් වේලාවට ආසන්නව +100 High Odd එකක් ලැබී ඇත්නම්, එම වේලාවේ Betting නැවැත්විය යුතුය.
+      </div>
+
+      <div class="tip">
+        <strong>6.</strong> ඇතිවන ඕනෑම තත්වයක් යටතේ, නියමිත නීති අනුව ක්‍රියාත්මක වුවද ජයග්‍රහණයක් නොලැබුණොත්, ඊළඟ සිග්නල් වෙලාව සඳහා මනස සූදානම් කර රැඳී සිටින්න.
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <a href="#" class="btn" id="proceedBtn">PROCEED TO SIGNAL</a>
+    </div>
   </div>
-  <div class="tip">
-    <strong>1.</strong> සිග්නල් වේලාවට විනාඩි 15 කට පෙර Betting ආරම්භ කරන්න.<br>
-    උදාහරණය: සිග්නල් වේලාව 10:20:00 නම්, 10:19:45 සිට වට තුනක් (Rounds 3) Betting කරන්න.<br>
-    වට තුනක් තුළ Win ලැබෙන තුරු Bet කරන්න.
-  </div>
 
-  <div class="tip">
-    <strong>2.</strong> සිග්නල් වේලාවේ අතික්‍රමණය වුවහොත්, එම සිග්නල් එක නොසලකා හැරන්න.<br>
-    උදාහරණය: 10:19:00දී Rounds යාමක් සිදු වී ඇත්නම්, 10:20:00ට ඉදිරියට ගිය පසු Betting නොකරන්න.
-  </div>
+  <script>
+    const tipsContent = document.getElementById('tipsContent');
+    const proceedBtn = document.getElementById('proceedBtn');
+    let isFullyScrolled = false;
 
-  <div class="tip">
-    <strong>3.</strong> 2× Odd එකේදී Martingale ක්‍රමය භාවිත කරන්න.<br>
-    වට තුනක් (Rounds 3) පමණක් Martingale ක්‍රමය යොදාගන්න.
-  </div>
+    tipsContent.addEventListener('scroll', () => {
+      if (tipsContent.scrollTop + tipsContent.clientHeight >= tipsContent.scrollHeight - 10) {
+        proceedBtn.classList.add('active');
+        isFullyScrolled = true;
+      }
+    });
 
-  <div class="tip">
-    <strong>4.</strong> සිග්නල් වේලාවට ආසන්නව 2× ට අඩු Odd තුනක් (Low Odds) දැක්වී ඇත්නම්, එම සිග්නල් එක නොසලකා හැරීම අවශ්‍යය.
-  </div>
-
-  <div class="tip">
-    <strong>5.</strong> සිග්නල් වේලාවට ආසන්නව +100 High Odd එකක් ලැබී ඇත්නම්, එම වේලාවේ Betting නැවැත්විය යුතුය.
-  </div>
-
-  <div class="tip">
-    <strong>6.</strong> ඇතිවන ඕනෑම තත්වයක් යටතේ, නියමිත නීති අනුව ක්‍රියාත්මක වුවද ජයග්‍රහණයක් නොලැබුණොත්, ඊළඟ සිග්නල් වෙලාව සඳහා මනස සූදානම් කර රැඳී සිටින්න.
-  </div>
-</div>
-
-<div class="btn-container">
-  <a href="#" class="btn" id="proceedBtn">PROCEED TO SIGNAL</a>
-</div>
-
-  </div><script>
-  const tipsContent = document.getElementById('tipsContent');
-  const proceedBtn = document.getElementById('proceedBtn');
-
-  tipsContent.addEventListener('scroll', () => {
-    if (tipsContent.scrollTop + tipsContent.clientHeight >= tipsContent.scrollHeight - 10) {
-      proceedBtn.classList.add('active');
-      proceedBtn.href = "https://damindu817.github.io/AVIATOR-2---3-ODD---1XBET/";
-    }
-  });
-
-  proceedBtn.addEventListener('click', function(e) {
-    if (!proceedBtn.classList.contains('active')) {
-      e.preventDefault();
-    }
-  });
-</script></body>
+    proceedBtn.addEventListener('click', function(e) {
+      if (!isFullyScrolled) {
+        e.preventDefault(); // Prevent clicking if not fully scrolled
+      } else {
+        proceedBtn.href = "https://damindu817.github.io/AVIATOR-2---3-ODD---1XBET/";
+        // Disable back button
+        history.pushState(null, null, location.href);
+        window.addEventListener('popstate', function () {
+          history.go(1);
+        });
+      }
+    });
+  </script>
+</body>
 </html>
