@@ -1,167 +1,161 @@
-<!DOCTYPE html>
-<html lang="si">
+<!DOCTYPE html><html lang="si">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aviator Smart Tips</title>
+  <title>Aviator Game උපදෙස්</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0c0c0c;
+      background: linear-gradient(145deg, #0c0c0c, #1a1a1a);
       color: #e0e0e0;
       margin: 0;
       padding: 20px;
+      min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      background-image: linear-gradient(145deg, #0c0c0c, #1a1a1a);
-      animation: fadeInBody 1.2s ease-in-out;
-    }
+      align-items: center;
+      animation: fadeInBody 1s ease-in-out;
+    }@keyframes fadeInBody {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeInBody {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+.tips-container {
+  width: 95%;
+  max-width: 450px;
+  background: #161616;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 64, 0.4);
+  border: 2px solid #ff1744;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .tips-container {
-      width: 90%;
-      max-width: 500px;
-      height: 90vh;
-      max-height: 600px;
-      background: #161616;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(255, 0, 64, 0.3);
-      border: 1px solid #2c2c2c;
-      display: flex;
-      flex-direction: column;
-    }
+h1 {
+  font-size: 24px;
+  color: #ff1744;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
+}
 
-    h1 {
-      color: #ff1744;
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 24px;
-      text-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
-    }
+.tips-scroll {
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
 
-    .scroll-box {
-      flex: 1;
-      overflow-y: auto;
-      background: #1f1f1f;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
-      border: 1px solid #333;
-      scroll-behavior: smooth;
-    }
+.tip {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-left: 4px solid #ff1744;
+  background-color: #212121;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+}
 
-    .tip {
-      margin-bottom: 16px;
-      padding: 12px;
-      border-left: 4px solid #ff1744;
-      background-color: #252525;
-      border-radius: 8px;
-    }
+.tip strong {
+  color: #ff5252;
+}
 
-    .tip strong {
-      color: #ff5252;
-    }
+.btn-container {
+  width: 100%;
+  text-align: center;
+}
 
-    .btn-container {
-      text-align: center;
-    }
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  background: #444;
+  color: #ccc;
+  border: none;
+  border-radius: 6px;
+  cursor: not-allowed;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+  max-width: 180px;
+  width: 90%;
+}
 
-    .btn {
-      padding: 12px 24px;
-      background: #444;
-      color: #999;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: not-allowed;
-      box-shadow: 0 0 8px rgba(255, 23, 68, 0.2);
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
+.btn.active {
+  background: #ff1744;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+}
 
-    .btn.active {
-      background: #ff1744;
-      color: #fff;
-      cursor: pointer;
-      box-shadow: 0 0 15px rgba(255, 23, 68, 0.6);
-      animation: pulse 1.5s infinite;
-    }
+@media (max-width: 480px) {
+  .tips-container {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .tip {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 13px;
+    padding: 8px 16px;
+    max-width: 160px;
+  }
+}
 
-    .btn.active:hover {
-      background: #ff3366;
-      transform: scale(1.05);
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px rgba(255, 23, 68, 0.6); }
-      50% { box-shadow: 0 0 20px rgba(255, 23, 68, 1); }
-      100% { box-shadow: 0 0 10px rgba(255, 23, 68, 0.6); }
-    }
-
-    @media (max-width: 600px) {
-      .tips-container {
-        width: 95%;
-        height: 90vh;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      .btn {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-    }
   </style>
 </head>
-<body>
-
-  <div class="tips-container">
-    <h1>Smart Play උපදෙස්</h1>
-
-    <div class="scroll-box" id="scrollBox">
-      <div class="tip">
-        <strong>1.</strong> සිග්නල් වෙලාවට කලින් ×2ට අඩු (නිල්) ඔඩ් 3කට වඩා තිබේ නම්, එම සිග්නල් මත බැට් කිරීමෙන් වළකින්න.
-      </div>
-      <div class="tip">
-        <strong>2.</strong> <strong>Auto Bet</strong> සහ <strong>Manual Bet</strong> භාවිතයෙන් ක්‍රීඩා කරන්න. එකම ඔඩ් එකේ දිගින් Cash Out නොකරන්න.
-      </div>
-      <div class="tip">
-        <strong>3.</strong> සිග්නල් වෙලාවට ආසන්නව (විනාඩි 1-2) ×100 හෝ වැඩි ඔඩ් එකක් තිබේ නම්, එවැනි අවස්ථාවල බැට් කිරීම අවදානම්.
-      </div>
-      <div class="tip">
-        <strong>4.</strong> Martingale ක්‍රමය වට 3 සඳහා පමණක් යොදාගන්න.
-      </div>
-      <div class="tip">
-        <strong>5.</strong> උඩින් වැටුණු විනාඩි ගණනින් වැඩියෙන් පසු Betting කිරීමට වළකින්න.
-      </div>
-    </div>
-
-    <div class="btn-container">
-      <a href="#" class="btn" id="proceedBtn">PROCEED TO SIGNAL</a>
-    </div>
-
+<body>  <div class="tips-container">
+    <h1>Aviator Game උපදෙස්</h1><div class="tips-scroll" id="tipsContent">
+  <div class="tip">
+    <strong>සිග්නල් ක්‍රමවේදය සහ අනුගමනය කළ යුතු නියමයන්</strong>
+  </div>
+  <div class="tip">
+    <strong>1.</strong> සිග්නල් වේලාවට විනාඩි 15 කට පෙර Betting ආරම්භ කරන්න.<br>
+    උදාහරණය: සිග්නල් වේලාව 10:20:00 නම්, 10:19:45 සිට වට තුනක් (Rounds 3) Betting කරන්න.<br>
+    වට තුනක් තුළ Win ලැබෙන තුරු Bet කරන්න.
   </div>
 
-<script>
-  const scrollBox = document.getElementById('scrollBox');
+  <div class="tip">
+    <strong>2.</strong> සිග්නල් වේලාවේ අතික්‍රමණය වුවහොත්, එම සිග්නල් එක නොසලකා හැරන්න.<br>
+    උදාහරණය: 10:19:00දී Rounds යාමක් සිදු වී ඇත්නම්, 10:20:00ට ඉදිරියට ගිය පසු Betting නොකරන්න.
+  </div>
+
+  <div class="tip">
+    <strong>3.</strong> 2× Odd එකේදී Martingale ක්‍රමය භාවිත කරන්න.<br>
+    වට තුනක් (Rounds 3) පමණක් Martingale ක්‍රමය යොදාගන්න.
+  </div>
+
+  <div class="tip">
+    <strong>4.</strong> සිග්නල් වේලාවට ආසන්නව 2× ට අඩු Odd තුනක් (Low Odds) දැක්වී ඇත්නම්, එම සිග්නල් එක නොසලකා හැරීම අවශ්‍යය.
+  </div>
+
+  <div class="tip">
+    <strong>5.</strong> සිග්නල් වේලාවට ආසන්නව +100 High Odd එකක් ලැබී ඇත්නම්, එම වේලාවේ Betting නැවැත්විය යුතුය.
+  </div>
+
+  <div class="tip">
+    <strong>6.</strong> ඇතිවන ඕනෑම තත්වයක් යටතේ, නියමිත නීති අනුව ක්‍රියාත්මක වුවද ජයග්‍රහණයක් නොලැබුණොත්, ඊළඟ සිග්නල් වෙලාව සඳහා මනස සූදානම් කර රැඳී සිටින්න.
+  </div>
+</div>
+
+<div class="btn-container">
+  <a href="#" class="btn" id="proceedBtn">PROCEED TO SIGNAL</a>
+</div>
+
+  </div><script>
+  const tipsContent = document.getElementById('tipsContent');
   const proceedBtn = document.getElementById('proceedBtn');
 
-  scrollBox.addEventListener('scroll', () => {
-    if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight - 10) {
+  tipsContent.addEventListener('scroll', () => {
+    if (tipsContent.scrollTop + tipsContent.clientHeight >= tipsContent.scrollHeight - 10) {
       proceedBtn.classList.add('active');
-      proceedBtn.href = "https://damindu817.github.io/AVIATOR-2---3-ODD---1XBET/");
+      proceedBtn.href = "https://damindu817.github.io/AVIATOR-2---3-ODD---1XBET/";
+    }
   });
 
   proceedBtn.addEventListener('click', function(e) {
@@ -169,7 +163,5 @@
       e.preventDefault();
     }
   });
-</script>
-
-</body>
+</script></body>
 </html>
