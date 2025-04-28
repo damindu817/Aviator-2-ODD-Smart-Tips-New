@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviator Smart Tips</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0c0c0c;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: linear-gradient(145deg, #0c0c0c, #1a1a1a);
+      animation: fadeInBody 1.2s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .tips-container {
+      width: 90%;
+      max-width: 500px;
+      height: 90vh;
+      max-height: 600px;
+      background: #161616;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 64, 0.3);
+      border: 1px solid #2c2c2c;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #ff1744;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 24px;
+      text-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+    }
+
+    .scroll-box {
+      flex: 1;
+      overflow-y: auto;
+      background: #1f1f1f;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      scroll-behavior: smooth;
+    }
+
+    .tip {
+      margin-bottom: 16px;
+      padding: 12px;
+      border-left: 4px solid #ff1744;
+      background-color: #252525;
+      border-radius: 8px;
+    }
+
+    .tip strong {
+      color: #ff5252;
+    }
+
+    .btn-container {
+      text-align: center;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: #444;
+      color: #999;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: not-allowed;
+      box-shadow: 0 0 8px rgba(255, 23, 68, 0.2);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn.active {
+      background: #ff1744;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 23, 68, 0.6);
+      animation: pulse 1.5s infinite;
+    }
+
+    .btn.active:hover {
+      background: #ff3366;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(255, 23, 68, 0.6); }
+      50% { box-shadow: 0 0 20px rgba(255, 23, 68, 1); }
+      100% { box-shadow: 0 0 10px rgba(255, 23, 68, 0.6); }
+    }
+
+    @media (max-width: 600px) {
+      .tips-container {
+        width: 95%;
+        height: 90vh;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tips-container">
+    <h1>Smart Play උපදෙස්</h1>
+
+    <div class="scroll-box" id="scrollBox">
+      <div class="tip">
+        <strong>1.</strong> සිග්නල් වෙලාවට කලින් ×2ට අඩු (නිල්) ඔඩ් 3කට වඩා තිබේ නම්, එම සිග්නල් මත බැට් කිරීමෙන් වළකින්න.
+      </div>
+      <div class="tip">
+        <strong>2.</strong> <strong>Auto Bet</strong> සහ <strong>Manual Bet</strong> භාවිතයෙන් ක්‍රීඩා කරන්න. එකම ඔඩ් එකේ දිගින් Cash Out නොකරන්න.
+      </div>
+      <div class="tip">
+        <strong>3.</strong> සිග්නල් වෙලාවට ආසන්නව (විනාඩි 1-2) ×100 හෝ වැඩි ඔඩ් එකක් තිබේ නම්, එවැනි අවස්ථාවල බැට් කිරීම අවදානම්.
+      </div>
+      <div class="tip">
+        <strong>4.</strong> Martingale ක්‍රමය වට 3 සඳහා පමණක් යොදාගන්න.
+      </div>
+      <div class="tip">
+        <strong>5.</strong> උඩින් වැටුණු විනාඩි ගණනින් වැඩියෙන් පසු Betting කිරීමට වළකින්න.
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <a href="#" class="btn" id="proceedBtn">PROCEED TO SIGNAL</a>
+    </div>
+
+  </div>
+
+<script>
+  const scrollBox = document.getElementById('scrollBox');
+  const proceedBtn = document.getElementById('proceedBtn');
+
+  scrollBox.addEventListener('scroll', () => {
+    if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight - 10) {
+      proceedBtn.classList.add('active');
+      proceedBtn.href = "https://damindu817.github.io/AVIATOR-2---3-ODD---1XBET/
+    }
+  });
+
+  proceedBtn.addEventListener('click', function(e) {
+    if (!proceedBtn.classList.contains('active')) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
