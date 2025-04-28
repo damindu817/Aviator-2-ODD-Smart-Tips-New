@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aviator Game උපදෙස්</title>
+  <title>Aviator Games උපදෙස්</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -149,7 +149,7 @@
     </div>
 
     <div class="btn-container">
-      <a href="#" class="btn" id="proceedBtn">PROCEED TO SIGNAL</a>
+      <a href="https://damindu817.github.io/AVIATOR-2---3-ODD---1XBET/" class="btn" id="proceedBtn">PROCEED TO SIGNAL</a>
     </div>
   </div>
 
@@ -169,11 +169,11 @@
       if (!isFullyScrolled) {
         e.preventDefault(); // Prevent clicking if not fully scrolled
       } else {
-        proceedBtn.href = "https://damindu817.github.io/AVIATOR-2---3-ODD---1XBET/";
-        // Disable back button
+        // Disable Back button behavior
         history.pushState(null, null, location.href);
         window.addEventListener('popstate', function () {
-          history.go(1);
+          // Redirect back to main menu page or desired page
+          window.location.href = "https://your-main-menu-url.com"; // change this to your menu URL
         });
       }
     });
